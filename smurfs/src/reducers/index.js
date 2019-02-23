@@ -15,7 +15,6 @@
 */
 
 import { ADD_SMURF, GET_SMURFS, ERROR, LOADING } from "../actions"
-import { loadavg } from "os";
 
 const initialState = {
   smurfs: [],
@@ -35,7 +34,7 @@ const initialState = {
   Components can then read your store as, `state` and not `state.fooReducer`.
 */
 
-export const rootReducer = () => {
+export default function rootReducer (state = initialState, action)  {
   switch (action.type) {
     case ADD_SMURF:
       return {
