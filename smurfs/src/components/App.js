@@ -23,4 +23,10 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    error: state.error
+  }
+}
+
 export default connect(mapStateToProps)(App);
