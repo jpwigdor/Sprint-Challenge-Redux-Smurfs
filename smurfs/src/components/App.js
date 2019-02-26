@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import './App.css';
-
+import SmurfList from './SmurfList';
 
 /*
  to wire this component up you're going to need a few things.
@@ -16,8 +16,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*Component Here*/}
-        {/*Component Here*/}
+        <SmurfList />
+        {/*Smurf Input Component Here - Once Made*/}
       </div>
     );
   }
