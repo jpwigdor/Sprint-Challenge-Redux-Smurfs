@@ -2,10 +2,10 @@
   Be sure to import in all of the action types from `../actions`
 */
 import {
-  GET_SMURFS_FTCHING,
+  GET_SMURFS_FETCHING,
   GET_SMURFS_SUCCESS,
   GET_SMURFS_FAILURE,
-  ADD_SMURFS_FTCHING,
+  ADD_SMURFS_FETCHING,
   ADD_SMURFS_SUCCESS,
   ADD_SMURFS_FAILURE
 } from "../actions";
@@ -40,7 +40,7 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     //GET
-    case GET_SMURFS_FTCHING:
+    case GET_SMURFS_FETCHING:
       return {
         ...state,
         fetchingSmurfs: true,
@@ -64,7 +64,7 @@ const rootReducer = (state = initialState, action) => {
     // ADD_SMURFS_SUCCESS,
     // ADD_SMURFS_FAILURE
 
-    case ADD_SMURFS_FTCHING:
+    case ADD_SMURFS_FETCHING:
       return {
         ...state,
         fetchingSmurfs: true
