@@ -4,7 +4,10 @@
 import {
   GET_SMURFS_FTCHING,
   GET_SMURFS_SUCCESS,
-  GET_SMURFS_FAILURE
+  GET_SMURFS_FAILURE,
+  ADD_SMURFS_FTCHING,
+  ADD_SMURFS_SUCCESS,
+  ADD_SMURFS_FAILURE
 } from "../actions";
 /*
  Your initial/default state for this project could *Although does not have to* look a lot like this
@@ -36,6 +39,7 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
+    //GET
     case GET_SMURFS_FTCHING:
       return {
         ...state,
@@ -50,6 +54,29 @@ const rootReducer = (state = initialState, action) => {
         error: null
       };
     case GET_SMURFS_FAILURE:
+      return {
+        ...state,
+        fetchingSmurfs: false,
+        error: action.payload
+      };
+    //POST
+    // ADD_SMURFS_FTCHING,
+    // ADD_SMURFS_SUCCESS,
+    // ADD_SMURFS_FAILURE
+
+    case ADD_SMURFS_FTCHING:
+      return {
+        ...state,
+        fetchingSmurfs: true
+      };
+    case ADD_SMURFS_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        fetchingSmurfs: false,
+        smurfs: action.payload
+      };
+    case ADD_SMURFS_FAILURE:
       return {
         ...state,
         fetchingSmurfs: false,
